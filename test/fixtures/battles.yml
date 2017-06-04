@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hp_total: 1
+  damage_total: 1
+
+two:
+  hp_total: 1
+  damage_total: 1
