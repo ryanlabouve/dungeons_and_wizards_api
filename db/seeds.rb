@@ -6,10 +6,14 @@ Player.delete_all
     image: "https://gifcannon.s3.amazonaws.com/Web_Image_2017-06-03_23-33-43.png",
     moves: [
       {
-        name: "Whitch-bane stab"
+        name: "Whitch-bane stab",
+        damage: 100,
+        queue_time: 1,
       },
       {
-        name: "Ralley cavalary charge"
+        name: "Ralley cavalary charge",
+        damage: 100,
+        queue_time: 1,
       }
     ]
   },
@@ -19,10 +23,14 @@ Player.delete_all
     image: "https://gifcannon.s3.amazonaws.com/Web_Image_2017-06-03_23-34-13.png",
     moves: [
       {
-        name: "Ranger strike"
+        name: "Ranger strike",
+        damage: 100,
+        queue_time: 1,
       },
       {
-        name: "This army..."
+        name: "This army...",
+        damage: 100,
+        queue_time: 1,
       }
     ]
   },
@@ -32,10 +40,14 @@ Player.delete_all
     image: "https://gifcannon.s3.amazonaws.com/Web_Image_2017-06-03_23-34-32.png",
     moves: [
       {
-        name: "MINE"
+        name: "MINE",
+        damage: 100,
+        queue_time: 1,
       },
       {
-        name: "My Precious..."
+        name: "My Precious...",
+        damage: 100,
+        queue_time: 1,
       }
     ]
   },
@@ -45,10 +57,14 @@ Player.delete_all
     image: "https://gifcannon.s3.amazonaws.com/Web_Image_2017-06-03_23-35-15.png",
     moves: [
       {
-        name: "Bunny charge"
+        name: "Bunny charge",
+        damage: 100,
+        queue_time: 1,
       },
       {
-        name: "Spell with _reliable_ Staff"
+        name: "Spell with _reliable_ Staff",
+        damage: 100,
+        queue_time: 1,
       }
     ]
   },
@@ -58,10 +74,14 @@ Player.delete_all
     image: "https://gifcannon.s3.amazonaws.com/Web_Image_2017-06-03_23-35-47.png",
     moves: [
       {
-        name: "Swing axe"
+        name: "Swing axe",
+        damage: 100,
+        queue_time: 1,
       },
       {
-        name: "Swing axe harder"
+        name: "Swing axe harder",
+        damage: 100,
+        queue_time: 1,
       }
     ]
   },
@@ -72,10 +92,14 @@ Player.delete_all
     image: "https://gifcannon.s3.amazonaws.com/Web_Image_2017-06-03_23-36-52.png",
     moves: [
       {
-        name: "Bullseye"
+        name: "Bullseye",
+        damage: 100,
+        queue_time: 1,
       },
       {
-        name: "Bullseye whlie moving"
+        name: "Bullseye whlie moving",
+        damage: 100,
+        queue_time: 1,
       }
     ]
   },
@@ -86,10 +110,14 @@ Player.delete_all
     image: "https://gifcannon.s3.amazonaws.com/Web_Image_2017-06-03_23-37-21.png",
     moves: [
       {
-        name: "Show picture of child and wife"
+        name: "Show picture of child and wife",
+        damage: 100,
+        queue_time: 1,
       },
       {
-        name: "MY AXE"
+        name: "MY AXE",
+        damage: 100,
+        queue_time: 1,
       }
     ]
   },
@@ -100,10 +128,14 @@ Player.delete_all
     image: "https://gifcannon.s3.amazonaws.com/Web_Image_2017-06-03_23-40-52.png",
     moves: [
       {
-        name: "Summon the eagles"
+        name: "Summon the eagles",
+        damage: 100,
+        queue_time: 1,
       },
       {
-        name: "YOU SHALL NOT PASS"
+        name: "YOU SHALL NOT PASS",
+        damage: 100,
+        queue_time: 1,
       }
     ]
   },
@@ -113,10 +145,14 @@ Player.delete_all
     image: "https://gifcannon.s3.amazonaws.com/Web_Image_2017-06-04_00-26-27.png",
     moves: [
       {
-        name: "Charge into certain doom"
+        name: "Charge into certain doom",
+        damage: 100,
+        queue_time: 1,
       },
       {
-        name: "Charge into more certain doom"
+        name: "Charge into more certain doom",
+        damage: 100,
+        queue_time: 1,
       }
     ]
   }
