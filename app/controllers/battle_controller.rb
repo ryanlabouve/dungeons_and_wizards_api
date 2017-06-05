@@ -4,6 +4,11 @@ class BattleController < ApplicationController
     render json: @battle
   end
 
+  def recent_activity
+    @activity = Activity.all.order(:id).limit(5).reverse
+    render json: @activity
+  end
+
   def move
     # TODO refactor this to be less dumb
     @battle = Battle.last
@@ -19,6 +24,9 @@ class BattleController < ApplicationController
     else
       render json: { "success": false }
     end
-    # TODO Push to activity log
+    Activity.create!({
+      activity_by: @player.name,
+      message: "did _#{@move["name"]}_ causing *#{@move["damage"]}* damage"
+    })
   end
 end
