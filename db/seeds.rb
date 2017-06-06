@@ -7,13 +7,15 @@ Player.delete_all
     moves: [
       {
         name: "Whitch-bane stab",
-        damage: 100,
-        queue_time: 1,
+        damage: 400,
+        queue_time: 10,
+        success_rate: 0.7,
       },
       {
         name: "Ralley cavalary charge",
         damage: 100,
         queue_time: 1,
+        success_rate: 0.95,
       }
     ]
   },
@@ -26,11 +28,13 @@ Player.delete_all
         name: "Ranger strike",
         damage: 100,
         queue_time: 1,
+        success_rate: 0.95,
       },
       {
-        name: "This army...",
-        damage: 100,
-        queue_time: 1,
+        name: "Army of the Dead",
+        damage: 800,
+        queue_time: 20,
+        success_rate: 0.5,
       }
     ]
   },
@@ -41,13 +45,15 @@ Player.delete_all
     moves: [
       {
         name: "MINE",
-        damage: 100,
+        damage: 150,
         queue_time: 1,
+        success_rate: 0.95,
       },
       {
         name: "My Precious...",
-        damage: 100,
-        queue_time: 1,
+        damage: 80,
+        queue_time: 0.3,
+        success_rate: 0.81,
       }
     ]
   },
@@ -63,8 +69,9 @@ Player.delete_all
       },
       {
         name: "Spell with _reliable_ Staff",
-        damage: 100,
-        queue_time: 1,
+        damage: 500,
+        queue_time: 4,
+        success_rate: 0.3,
       }
     ]
   },
@@ -75,13 +82,15 @@ Player.delete_all
     moves: [
       {
         name: "Swing axe",
-        damage: 100,
+        damage: 200,
         queue_time: 1,
+        success_rate: 0.9,
       },
       {
         name: "Swing axe harder",
-        damage: 100,
-        queue_time: 1,
+        damage: 250,
+        queue_time: 1.5,
+        success_rate: 0.8,
       }
     ]
   },
@@ -93,13 +102,15 @@ Player.delete_all
     moves: [
       {
         name: "Bullseye",
-        damage: 100,
-        queue_time: 1,
+        damage: 130,
+        queue_time: 2,
+        success_rate: 0.99,
       },
       {
         name: "Bullseye whlie moving",
-        damage: 100,
-        queue_time: 1,
+        damage: 220,
+        queue_time: 3,
+        success_rate: 0.98,
       }
     ]
   },
@@ -111,13 +122,15 @@ Player.delete_all
     moves: [
       {
         name: "Show picture of child and wife",
-        damage: 100,
+        damage: 50,
         queue_time: 1,
+        success_rate: 0.99,
       },
       {
         name: "MY AXE",
-        damage: 100,
-        queue_time: 1,
+        damage: 200,
+        queue_time: 1.5,
+        success_rate: 0.88,
       }
     ]
   },
@@ -129,13 +142,15 @@ Player.delete_all
     moves: [
       {
         name: "Summon the eagles",
-        damage: 100,
-        queue_time: 1,
+        damage: 999,
+        queue_time: 50,
+        success_rate: 0.95,
       },
       {
         name: "YOU SHALL NOT PASS",
-        damage: 100,
+        damage: 150,
         queue_time: 1,
+        success_rate: 0.9,
       }
     ]
   },
@@ -146,13 +161,15 @@ Player.delete_all
     moves: [
       {
         name: "Charge into certain doom",
-        damage: 100,
-        queue_time: 1,
+        damage: 200,
+        queue_time: 5,
+        success_rate: 0.8
       },
       {
         name: "Charge into more certain doom",
-        damage: 100,
-        queue_time: 1,
+        damage: 250,
+        queue_time: 5,
+        success_rate: 0.7,
       }
     ]
   }
