@@ -5,7 +5,7 @@ class BattleController < ApplicationController
   end
 
   def recent_activity
-    @activity = Activity.all.order(:id).limit(5).reverse
+    @activity = Activity.all.order(id: :desc).limit(5).reverse
     render json: @activity
   end
 
@@ -14,8 +14,10 @@ class BattleController < ApplicationController
     @battle = Battle.last
     @move_name = params['name']
     @player = Player.where('moves @> ?', "[{\"name\": \"#{@move_name}\"}]")
+    @player = @player.first
+
     # TODO error if no player
-    @move = @player.first.moves.select { |m| m['name'] == @move_name }
+    @move = @player.moves.select { |m| m['name'] == @move_name }
     @move = @move.first
     sleep @move["queue_time"].to_i
     @battle.damage_total += @move["damage"].to_i
@@ -24,6 +26,7 @@ class BattleController < ApplicationController
     else
       render json: { "success": false }
     end
+
     Activity.create!({
       activity_by: @player.name,
       message: "did _#{@move["name"]}_ causing *#{@move["damage"]}* damage"
