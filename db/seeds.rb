@@ -13,9 +13,9 @@ Player.delete_all
       },
       {
         name: "Ralley cavalary charge",
-        damage: 100,
-        queue_time: 1,
-        success_rate: 0.95,
+        damage: 800,
+        queue_time: 8.3,
+        success_rate: 0.75,
       }
     ]
   },
@@ -27,7 +27,7 @@ Player.delete_all
       {
         name: "Ranger strike",
         damage: 100,
-        queue_time: 1,
+        queue_time: 0.3,
         success_rate: 0.95,
       },
       {
@@ -47,7 +47,7 @@ Player.delete_all
         name: "MINE",
         damage: 150,
         queue_time: 1,
-        success_rate: 0.95,
+        success_rate: 0.75,
       },
       {
         name: "My Precious...",
@@ -64,13 +64,14 @@ Player.delete_all
     moves: [
       {
         name: "Bunny charge",
-        damage: 100,
-        queue_time: 1,
+        damage: 50,
+        queue_time: 0.5,
+        success_rate: 0.9,
       },
       {
         name: "Spell with _reliable_ Staff",
-        damage: 500,
-        queue_time: 4,
+        damage: 800,
+        queue_time: 7,
         success_rate: 0.3,
       }
     ]
@@ -83,14 +84,14 @@ Player.delete_all
       {
         name: "Swing axe",
         damage: 200,
-        queue_time: 1,
+        queue_time: 0.8,
         success_rate: 0.9,
       },
       {
         name: "Swing axe harder",
         damage: 250,
-        queue_time: 1.5,
-        success_rate: 0.8,
+        queue_time: 1.2,
+        success_rate: 0.81,
       }
     ]
   },
@@ -103,13 +104,13 @@ Player.delete_all
       {
         name: "Bullseye",
         damage: 130,
-        queue_time: 2,
+        queue_time: 1.5,
         success_rate: 0.99,
       },
       {
         name: "Bullseye whlie moving",
         damage: 220,
-        queue_time: 3,
+        queue_time: 2.3,
         success_rate: 0.98,
       }
     ]
@@ -123,7 +124,7 @@ Player.delete_all
       {
         name: "Show picture of child and wife",
         damage: 50,
-        queue_time: 1,
+        queue_time: 0.7,
         success_rate: 0.99,
       },
       {
@@ -143,14 +144,14 @@ Player.delete_all
       {
         name: "Summon the eagles",
         damage: 999,
-        queue_time: 50,
+        queue_time: 20,
         success_rate: 0.95,
       },
       {
         name: "YOU SHALL NOT PASS",
         damage: 150,
-        queue_time: 1,
-        success_rate: 0.9,
+        queue_time: 1.1,
+        success_rate: 0.7,
       }
     ]
   },
@@ -162,14 +163,14 @@ Player.delete_all
       {
         name: "Charge into certain doom",
         damage: 200,
-        queue_time: 5,
-        success_rate: 0.8
+        queue_time: 6,
+        success_rate: 0.7
       },
       {
         name: "Charge into more certain doom",
-        damage: 250,
-        queue_time: 5,
-        success_rate: 0.7,
+        damage: 450,
+        queue_time: 8,
+        success_rate: 0.3,
       }
     ]
   }
