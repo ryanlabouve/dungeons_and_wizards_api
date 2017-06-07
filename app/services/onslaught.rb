@@ -6,15 +6,6 @@ class Onslaught
     rando_player = Player.offset(offset).first
     player_move = rando_player.moves.sample
 
-    # move = Move.new({
-    #   player: rando_player,
-    #   move: player_move,
-    #   battle: battle,
-    # })
-    # move.make!
-    #
-
-    # TODO: refactor to use HTTP isntead
     uri = URI('http://localhost:3000/move')
     http = Net::HTTP.new(uri.host, uri.port)
     req = Net::HTTP::Post.new(uri.path, 'Content-Type' => 'application/json')

@@ -10,20 +10,15 @@ class BattleController < ApplicationController
   end
 
   def move
-    battle = Battle.last
     player = Player.find(params['player_id'])
     move = player.moves.select { |m| m['name'] == params['move']['name'] }.first
 
-    move = Move.new({
-      player: player,
-      battle: battle,
-      move: move
+    MoveWorker.perform_async({
+      move: move,
+      player_id: player.id,
     })
 
-    if move.make!
-      render json: { "success": true }
-    else
-      render json: { "success": false }
-    end
+    # Add something for failure if thre's a prob scheduling move
+    render json: { "success": true }
   end
 end

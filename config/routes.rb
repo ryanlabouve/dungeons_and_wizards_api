@@ -1,4 +1,7 @@
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
+  mount Sidekiq::Web => '/sidekiq'
   resources :players
   get "/battle", to: 'battle#stats'
   post "/move", to: 'battle#move'

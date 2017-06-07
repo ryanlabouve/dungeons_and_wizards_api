@@ -4,7 +4,7 @@ class Battle < ApplicationRecord
   private
   def set_defaults
     self.damage_total ||= 0
-    self.hp_total ||= 1000
+    self.hp_total ||= 10000
   end
 
   def check_victory

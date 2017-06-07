@@ -1,6 +1,6 @@
 class Move
   def initialize(params)
-    @battle = params[:battle]
+    @battle = Battle.last
     @player = params[:player]
     @move = params[:move]
   end
