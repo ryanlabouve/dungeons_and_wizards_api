@@ -7,9 +7,14 @@ class Move
 
   def make!
     sleep @move["queue_time"].to_i
-    @battle.damage_total += @move["damage"].to_i.abs
-    @battle.save!
-    record_move()
+    # May need to do an eplicit transation
+
+    Battle.transaction do
+      @battle.reload
+      @battle.damage_total += @move["damage"].to_i.abs
+      @battle.save!
+      record_move()
+    end
   end
 
   private
