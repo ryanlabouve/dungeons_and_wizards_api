@@ -8,6 +8,7 @@ class Battle < ApplicationRecord
   end
 
   def check_victory
+    return if self.victory_at
     self.victory_at = Time.zone.now if self.damage_total > self.hp_total
   end
 end
