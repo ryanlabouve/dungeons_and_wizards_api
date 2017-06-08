@@ -13,32 +13,8 @@ class BattleController < ApplicationController
     player = Player.find(params['player_id'])
     move = player.moves.select { |m| m['name'] == params['move']['name'] }.first
 
-    # v1
-    move = Move.new({
-      move: params["move"],
-      player: Player.find(params["player_id"]),
-    })
-    move.make!
+    # TODO: Make your move
 
-    # #v2
-    # MoveWorker.perform_async({
-    #   move: move,
-    #   player_id: player.id,
-    # })
-
-    # #v3
-    # MoveManager.new.enqueue_move({
-    #   move: move,
-    #   player_id: player.id,
-    # })
-
-    # #v4
-    # RiskyMoveManager.new.enqueue_move({
-    #   move: move,
-    #   player_id: player.id,
-    # })
-
-    # Add something for failure if thre's a prob scheduling move
-    render json: { "success": true }
+    render json: { "success": false }
   end
 end

@@ -1,5 +1,7 @@
 require 'net/http'
 
+# Makes a random move from a random player
+# via the BattleController (i.e. over the network)
 class Onslaught
   def initialize
     offset = rand(Player.count)
@@ -15,7 +17,8 @@ class Onslaught
     }.to_json
     res = http.request(req)
 
-    # TODO: Deal with success_rate
-    puts "✔ (#{player_move['queue_time']}s) #{rando_player.name} attempts #{player_move['name']} and is successful"
+    mark = JSON.parse(res.body)["success"] ? "✔" : "✕"
+
+    puts "#{mark} (#{player_move['queue_time']}s) #{rando_player.name} attempts #{player_move['name']} and is successful"
   end
 end

@@ -1,3 +1,5 @@
+# All of the business logic to play our game
+# TODO: Will all of this work with Sidekiq? 🤔
 class Move
   def initialize(params)
     @battle = Battle.last
@@ -7,18 +9,14 @@ class Move
 
   def make!
     sleep @move["queue_time"].to_i
-    # May need to do an eplicit transation
+    move_successful = rand() < @move["success_rate"]
 
-    # Battle.transaction do
-    @battle.reload
-    if rand() < @move["success_rate"]
-      @battle.damage_total += @move["damage"].to_i.abs
+    if move_successful
+      @battle.damage_total += @move["damage"].to_i
       @battle.save!
-      record_move(true)
-    else
-      record_move(false)
     end
-    # end
+
+    record_move(move_successful)
   end
 
   private

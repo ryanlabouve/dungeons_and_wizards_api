@@ -12,7 +12,7 @@ def endFn(start)
 end
 
 namespace :assult do
-  desc "TODO"
+  desc "Runs 10 random attacks"
   task light: :environment do
     start = startFn
     10.times {
@@ -21,7 +21,7 @@ namespace :assult do
     endFn(start)
   end
 
-  desc "TODO"
+  desc "Runs 50 random attacks"
   task medium: :environment do
     start = startFn
     50.times {
@@ -30,7 +30,7 @@ namespace :assult do
     endFn(start)
   end
 
-  desc "TODO"
+  desc "Runs 150 random attacks"
   task heavy: :environment do
     start = startFn
     150.times {
