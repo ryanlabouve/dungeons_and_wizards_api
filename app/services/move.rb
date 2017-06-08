@@ -2,7 +2,7 @@
 # TODO: Will all of this work with Sidekiq? 🤔
 class Move
   def initialize(params)
-    @battle = Battle.last
+    @battle = Battle.last # Kludge: in a real game you would want to track multiple battles
     @player = params[:player]
     @move = params[:move]
   end
