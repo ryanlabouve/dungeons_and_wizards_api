@@ -13,8 +13,8 @@ class BattleController < ApplicationController
     player = Player.find(params['player_id'])
     move = player.moves.select { |m| m['name'] == params['move']['name'] }.first
 
-    MoveWorker.perform_async({
-      # player: player,
+
+    MoveManager.new.make({
       player_id: params['player_id'],
       move: move
     })
