@@ -14,7 +14,7 @@ class BattleController < ApplicationController
     move = player.moves.select { |m| m['name'] == params['move']['name'] }.first
 
 
-    MoveManager.new.make({
+    RiskyMoveManager.new.make({
       player_id: params['player_id'],
       move: move
     })
