@@ -13,8 +13,15 @@ class BattleController < ApplicationController
     player = Player.find(params['player_id'])
     move = player.moves.select { |m| m['name'] == params['move']['name'] }.first
 
-    # TODO: Make your move
+    move = Move.new({
+      player: player,
+      move: move
+    })
 
-    render json: { "success": false }
+    if move.make!
+      render json: { "success": true }
+    else
+      render json: { "success": false }
+    end
   end
 end
