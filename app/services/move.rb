@@ -4,15 +4,15 @@ class Move
   def initialize(params)
     @battle = Battle.last # Kludge: in a real game you would want to track multiple battles
     @player = params[:player]
-    @move = params[:move]
+    @move = ActiveSupport::HashWithIndifferentAccess.new(params[:move])
   end
 
   def make!
-    sleep @move["queue_time"].to_i
-    move_successful = rand() < @move["success_rate"]
+    sleep @move[:queue_time].to_i
+    move_successful = rand() < @move[:success_rate]
 
     if move_successful
-      @battle.damage_total += @move["damage"].to_i
+      @battle.damage_total += @move[:damage].to_i
       @battle.save!
     end
 
@@ -21,10 +21,12 @@ class Move
 
   private
   def record_move(successful)
+    message = "#{successful ? 'SUCCESS' : 'FAIL'} did _#{@move[:name]}_ causing *#{@move[:damage]}* damage"
+
     Activity.create!({
-      activity_by: @player.name,
+      activity_by: @player[:name],
       successful: successful,
-      message: "#{successful === true ? 'SUCCESS' : 'FAIL'} did _#{@move["name"]}_ causing *#{@move["damage"]}* damage"
+      message: message
     })
   end
 end
