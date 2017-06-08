@@ -12,6 +12,7 @@ class Move
     move_successful = rand() < @move[:success_rate]
 
     if move_successful
+      @battle.reload
       @battle.damage_total += @move[:damage].to_i
       @battle.save!
     end
